@@ -25,7 +25,7 @@ What's going on here? We made a change to `myNewScores`, but `myScores` changed 
 
 This is because of a difference in how JavaScript treats its primitive types, like number and string, and its non-primitive types, like arrays and objects. This is often referred to as "by value" and "by reference".
 
-As an example, you can think of a number variable "holding" the number you assign to it, but an array variable "holding" directions to where to find the actual array.
+As a metaphor, you can think of a number variable "holding" the number you assign to it, but an array variable "holding" directions to where to find the actual array.
 
 So, when you assign `myNumber` to `myNewNumber`, what gets put in `myNewNumber` is the value 42.
 
@@ -70,4 +70,6 @@ console.log(myScores); // (5) [31, 48, 24, 19, 45]
 console.log(myNewScores); // (5) [21, 48, 24, 19, 45]
 ](https://cdn.hashnode.com/res/hashnode/image/upload/v1647799687590/mbnxFUieN.png)
 
-These methods all result in "shallow" copies, which work fine for the simple arrays in these examples. But, if your original array contains nested arrays or objects, those sub-items in your new array would still be references (directions) to the original sub-items. 
+These methods all result in "shallow" copies, which work fine for the simple arrays in these examples. But, if your original array contains nested arrays or objects, those sub-items in your new array would still be references (directions) to the original sub-items.
+
+This idea of "by value" and "by reference" pops up in other areas too. Thinking of "by value" as "the thing" and "by reference" as "directions to the thing" is helpful to me to understand how that works.
